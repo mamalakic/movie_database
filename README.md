@@ -1,5 +1,8 @@
 # movie_database
 Insert movie name and metadata is filled automatically
+Many parts of code were done with help of ChatGPT
+Genre violates First Normal Form but it is not a column of great importance
+Also add personal notes when adding movie to towatch
 
 To see insides of movie.__dict__:
 1. Pass output to file
