@@ -93,7 +93,7 @@ while (True):
     movie_found = ia.search_movie(movie_name)[0]['title']
 
     cursor = connection.cursor()
-    query = "SELECT " + movie_found + " FROM movies_table"
+    query = "SELECT * FROM movies_table WHERE name='"+movie_found+"'" 
     cursor.execute(query)
     # Fetch rows
     rows = cursor.fetchall()
@@ -101,13 +101,14 @@ while (True):
     num_rows = cursor.rowcount
 
     if (num_rows > 0):
-        print("Movie " + movie_found + "already exists in registry")
+        print("Movie " + movie_found + " already exists in registry")
         continue
 
     # Retrieve movie details
     title, runtime, release_year, director, genre = get_movie_metadata(movie_name)
 
     # Insert the retrieved information into the database
+    # Already existing possibility is handled before
     cursor = connection.cursor()
     query = "INSERT INTO movies_table (name, runtime, release_year, director, notes, genre) VALUES (%s, %s, %s, %s, %s, %s)"
     values = (title, runtime, release_year, director, personal_notes, genre)
