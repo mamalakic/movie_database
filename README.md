@@ -1,4 +1,7 @@
 # SQL movie database
+Connectivity to IMDb achieved with Cinemagoer (previously IMDbPY)
+
+https://github.com/cinemagoer/cinemagoer
 1. Run mySQL db creation
 2. Run python script, add name, (optional) note
 4. Repeat until bored
