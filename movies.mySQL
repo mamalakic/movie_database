@@ -1,0 +1,11 @@
+DROP IF EXISTS movies;
+CREATE DATABASE movies;
+USE movies;
+
+CREATE TABLE movies_table (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  runtime VARCHAR(255),
+  genre VARCHAR(255),
+  release_year INT
+);
