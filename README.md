@@ -21,6 +21,7 @@ Genre column violates First Normal Form but it is not an important column to me
 ## TODO
 - Add mass-imports (probably csv)
 - Speed up querying to IMDb (if possible)
-
+- Navigate CLI with arrow keys
+- Remove entries using list like mikrotik
 
 
