@@ -9,7 +9,7 @@ Many parts of code were done with the help of ChatGPT
 Genre column violates First Normal Form but it is not an important column to me
 
 ### How I found the columns I needed:
-1. print(movie.__dict__)
+1. print(movie.\_\_dict\_\_)
 2. Pass output to file
 3. Open with notepad++:
 4. Replace ", '" with ",\n'" so every new member goes into newline
