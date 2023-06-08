@@ -1,16 +1,23 @@
-# movie_database
-Insert movie name and metadata is filled automatically
-Many parts of code were done with help of ChatGPT
-Genre violates First Normal Form but it is not a column of great importance
-Also add personal notes when adding movie to towatch
+# SQL movie database
+1. Run mySQL db creation
+2. Run python script, add name, (optional) note
+4. Repeat until bored
 
-To see insides of movie.__dict__:
-1. Pass output to file
-2. Open with notepad++:
-3. Replace ", '" with ",\n'" so every new member goes into newline
-4. Start of file contains members and contents, end of file contains member names only
+## Notes
+Many parts of code were done with the help of ChatGPT
+
+Genre column violates First Normal Form but it is not an important column to me
+
+### How I found the columns I needed:
+1. print(movie.__dict__)
+2. Pass output to file
+3. Open with notepad++:
+4. Replace ", '" with ",\n'" so every new member goes into newline
+5. Start of file contains members and contents of dictionary, end of file contains member names only
+
+## TODO
+- Add mass-imports (probably csv)
+- Speed up querying to IMDb (if possible)
 
 
-1. Run mySQL creation
-2. Run python script and add name
-3. Voila
+
